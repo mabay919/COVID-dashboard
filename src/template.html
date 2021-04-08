@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Links for the map-->
+  <link href="./styles/death_block.css" type="text/css">
+  <link href="./styles/map-styles.css" type="text/css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <title>COVID-19 Dashboard</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <h1>COVID-19 Dashboard</h1>
+  </nav>
+  <div class="first-block">
+    <div style=" flex-direction: column;  display: inline-flex;">
+        <div class="global_cases_wrapper"></div>
+        <div class="by_cases_wrapper"></div>
+    </div>
+    <section id="map-section">
+        <div class="map-wrapper">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#confirmed">Confirmed</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#recovered">Recovered</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#dead">Dead</a>
+                </li>
+            </ul>
+
+            <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active show" id="confirmed"></div>
+            <div class="tab-pane fade" id="recovered"></div>
+            <div class="tab-pane fade" id="dead"></div>
+            </div>
+            <div id="map"></div>
+        </div>
+    </section>
+
+  <div class="death_health_wrapper"></div>
+</div>
+    <div class="chartBlock">
+          <div class="size_button size_button_chart hidden"></div>
+          <canvas id="myChart"></canvas>
+          <button class="button_all_cases">All Cases</button>
+          <button class="button_all_death">All Death</button>
+          <button class="button_all_health">All recovered</button>
+    </div>
+    <footer class="footer">
+        <div class="author">
+            <p class="author_info">Yuliya Paddubnik
+                <a href="https://github.com/yupodd" class="my_link">-GitHub</a>
+            </p>
+            <p class="author_info">Liakhovchuk Andrii
+                <a href="https://github.com/mabay919" class="my_link">-GitHub</a>
+            </p>
+            <p class="author_info">Nikolay Potopa
+                <a href="https://github.com/Nazeroth" class="my_link">-GitHub</a>
+            </p>
+            <p class="author_info">Vladislav Sinitsa
+                <a href="https://github.com/sallinov" class="my_link">-GitHub</a>
+            </p>
+        </div>
+        <div class="courses">
+            <a href="https://rs.school/js/" class="cources_link">The Rolling Scopes<br>
+                <img src="https://rs.school/images/rs_school_js.svg" alt="cources image" class="cources_image">
+                <br>2020
+            </a>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <!-- <script src="./disease-graph.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

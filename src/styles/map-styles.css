@@ -1,0 +1,56 @@
+h1 {
+    color: bisque;
+}
+.tab-active,.nav-item:hover{
+    background-color: lightgrey;
+    text-decoration: underline;
+}
+#map {
+    height: 460px;
+    max-width: 900px;
+}
+
+.map-wrapper {
+    max-width: 900px;
+    margin: auto;
+}
+.legend i {
+width: 18px;
+height: 18px;
+float: left;
+margin-right: 8px;
+opacity: 0.7;
+}
+.legend{
+    display: flex;
+    flex-direction: row;
+    background: #fffbfb8c;
+}
+.info{
+    background-color: #ffffffba;
+    font-size: 13px;
+}
+.first-block{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+#map-section{
+    width: 50%;
+    margin: 0 10px;
+}
+.death_health_wrapper{
+    width: 25%;
+}
+@media(max-width: 950px) {
+    #map-section{
+        width: 100%;
+    }
+    .death_health_wrapper{
+        width: 100%;
+        justify-content: center;
+    }
+
+  }
